@@ -1,3 +1,4 @@
+
 section#contact-info{
 	font-size: .8em;
 }
@@ -12,3 +13,18 @@ section#contact-info{
 .small {
 	font-size: .8em;
 }
+
+section#personal-objective::first-letter{
+	font-size: 200%;
+	color: red;
+}
+
+section#personal-objective::first-line{
+	font-size: 100%;
+	background-color: green;
+
+}
+
+#volunteer-experience li{
+	font-weight: bold;
+	color: green;
