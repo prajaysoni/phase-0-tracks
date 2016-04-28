@@ -23,3 +23,8 @@ section#personal-objective::first-line{
 	background-color: green;
 
 }
+
+#volunteer-experience li{
+	font-weight: bold;
+	color: green;
+}
