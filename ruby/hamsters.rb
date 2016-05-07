@@ -12,3 +12,14 @@ age = gets.chomp
 if age == ""
 	age = nil
 end
+
+volume = volume.to_i
+
+if adoption.downcase == "yes"
+	adoption = true
+elsif adoption.downcase == "no"
+	adoption = false
+end
+		
+age = age.to_f
+
