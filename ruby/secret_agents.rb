@@ -9,7 +9,7 @@ def encrypt(x)
 			end
 		index += 1
 		end
-	puts word
+	#puts word
 	return word
 end
 
@@ -28,9 +28,29 @@ def decrypt(y)
        	   index += 1
        end
 
-   puts word
+   #puts word
    return word
 
 end
 
-decrypt(encrypt("swordfish"))
+#decrypt(encrypt("swordfish"))
+# This will first encrypt your password, print it, and then print the decrypted password
+
+
+
+begin
+	puts "Please write whether you want to encrypt or decrypt."
+	answer = gets.chomp
+	if answer == "encrypt"
+		puts "Please enter password"
+		password = gets.chomp
+		puts encrypt(password)
+	elsif answer == "decrypt"
+		puts "Please enter password"
+		password = gets.chomp
+		puts decrypt(password)
+	else
+		puts "Please enter a valid response"
+	end
+end until answer.downcase == "encrypt" || answer.downcase == "decrypt"
+			
