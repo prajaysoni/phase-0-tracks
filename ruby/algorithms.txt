@@ -12,3 +12,19 @@
 	- Else 
 		- Ask user for a valid input
 - End
+
+Having a conversation on the phone:
+
+- Is the phone ringing?
+	- No?
+		- Continue watching Game of Thrones
+	- Yes?
+		Is it important?
+			- No?
+				- Continue watching Game of Thrones
+			- Yes?
+				- Move hand towards phone and grab it
+				- Use thumb to slide across screen to unlock
+				- Put phone to ear and have conversation
+				- Finish conversation
+- End
