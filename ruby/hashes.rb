@@ -65,6 +65,41 @@ puts "The theme you chose is: #{client[:decorTheme]}"
 puts "You live in a(n) #{client[:residence]}"
 puts "There are #{client[:numRooms]} rooms in your home"
 
+puts "Please enter a key you wish to update, or enter 'none'."
+answer = gets.chomp
+
+if answer.downcase == "name"
+	puts "Enter a new name"
+	client[:name] = gets.chomp
+elsif answer.downcase == "age"
+	puts "Enter a new age"
+	client[:age] = gets.chomp
+elsif answer.downcase == "kids"
+	puts "Enter how many children you have"
+	client[:kids] = gets.chomp
+elsif answer.downcase == "decortheme"
+	puts "Enter your new decor theme"
+	client[:decorTheme] = gets.chomp
+elsif answer.downcase == "residence"
+	puts "Do you live in a house or apartment?"
+	client[:residence] = gets.chomp
+elsif answer == "numrooms"
+	puts "How many rooms are in your home?"
+	client[:numRooms] = gets.chomp
+elsif answer.downcase == "none"
+end
+
+puts "Your name is: #{client[:name]}"
+puts "Your age is: #{client[:age]}"
+puts "You have #{client[:kids]} children"
+puts "The theme you chose is: #{client[:decorTheme]}"
+puts "You live in a(n) #{client[:residence]}"
+puts "There are #{client[:numRooms]} rooms in your home"		
+		
+
+		
+		
+		
 
 
 
