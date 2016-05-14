@@ -54,6 +54,12 @@ client[:residence] = gets.chomp
 puts "How many rooms in your home?"
 client[:numRooms] = gets.chomp
 
+client[:age] = client[:age].to_i
+client[:kids] = client[:kids].to_i
+client[:numRooms] = client[:numRooms].to_i
+
+p client
+
 
 
 
