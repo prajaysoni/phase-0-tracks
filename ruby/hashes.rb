@@ -58,8 +58,12 @@ client[:age] = client[:age].to_i
 client[:kids] = client[:kids].to_i
 client[:numRooms] = client[:numRooms].to_i
 
-p client
-
+puts "Your name is: #{client[:name]}"
+puts "Your age is: #{client[:age]}"
+puts "You have #{client[:kids]} children"
+puts "The theme you chose is: #{client[:decorTheme]}"
+puts "You live in a(n) #{client[:residence]}"
+puts "There are #{client[:numRooms]} rooms in your home"
 
 
 
