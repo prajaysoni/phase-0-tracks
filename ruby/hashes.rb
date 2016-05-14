@@ -30,6 +30,8 @@ Opportunity to update a key
 	Elsif whatever key in inputted
 		give user the option to update the key
 	End
+
+Print updated hash out
 	
 =end
 
