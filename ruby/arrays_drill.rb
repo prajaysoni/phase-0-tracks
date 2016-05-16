@@ -16,4 +16,8 @@ p test
 if test.include?(100)
 	puts "100 is in the array"
 end
- 
+
+test2 = [44, 14, 65, 9]
+
+test.concat(test2)
+p test 
