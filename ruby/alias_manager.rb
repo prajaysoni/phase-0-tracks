@@ -15,13 +15,16 @@ Then use join to make name into a string again.
 Wrap above code inside an until loop
 Until the name entered equals 'quit', keep taking names
 
-
+Create array of names
+At the end of the loop, before asking for another name, store both names inside the array
+Use '<<' to do so
 	
 =end
 
 puts "Welcome to the Spy Name Generator 1000"
 puts "Please enter your name, or if you wish to leave, enter 'quit'"
 realName = gets.chomp
+spyBank = []
 
 until realName.downcase == "quit"
 
@@ -41,6 +44,22 @@ until realName.downcase == "quit"
 	end
 	
 	puts "Your spy name is: #{spyName(realName)}."
+	spyBank << "#{spyName(realName)}'s actual name is #{realName}"
 	puts "Enter another name or enter 'quit'"
 	realName = gets.chomp
 end
+
+if spyBank.length > 0
+	puts "Welcome to the Spy Name Bank"
+	spyBank.each{ |name| puts name}
+else
+	puts "You did not enter any names, so the Spy Name Bank is empty"
+end
+
+
+
+
+
+
+
+
