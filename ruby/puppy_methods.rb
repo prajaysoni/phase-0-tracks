@@ -5,5 +5,15 @@ class Puppy
     toy
   end
 
+  def speak(int)
+  	int.times do  
+  		puts "Woof!"
+  	end
+  end
+
 end
 
+pup = Puppy.new
+pup.fetch("bone")
+
+pup.speak(5)
