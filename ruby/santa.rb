@@ -1,6 +1,6 @@
 class Santa
 
-	def initialize(gender, ethnicity, robot)
+	def initialize(gender, ethnicity, robot, ethn)
 		puts "initializing Santa instance"
 		@robot = robot
 		if @robot.downcase == "yes"
@@ -9,7 +9,11 @@ class Santa
 			puts "This Santa is a human"
 		end
 		@gender = gender
-		@ethnicity = ethnicity
+		if ethn == ""
+			@ethnicity = ethnicity
+		else
+			@ethnicity = ethn
+		end
 		@reindeer_ranking = ["Rudolph", "Dasher", "Dancer", "Prancer", "Vixen",
 							 "Comet", "Cupid", "Donner", "Blitzen"]
 		@age = 0
@@ -17,6 +21,10 @@ class Santa
 
 	def speak()
 		puts "Ho, ho, ho!. Haaaappy holidays!"
+	end
+
+	def ethnicity_print()
+		puts "This Santa's ethnicity is: #{@ethnicity}"
 	end
 
 	def eat_milk_and_cookies(type)
@@ -33,6 +41,18 @@ example_ethnicities =["black", "Latino", "white", "Japanese-African",
 example_genders.length.times do |i|
 	puts "Is this Santa a robot?"
 	answer = gets.chomp
-	santas << Santa.new(example_genders[i], example_ethnicities[i], answer)
+	puts "Please enter an ethnicity, or one will be assigned"
+	ethn = gets.chomp
+	santas << Santa.new(example_genders[i], example_ethnicities[i], answer, ethn)
+	santas[i].ethnicity_print
 	puts "---------"
 end
+
+
+
+
+
+
+
+
+
