@@ -31,6 +31,31 @@ class Santa
 		puts "That was a good #{type}"
 	end
 
+	def celebrate_birthday()
+		@age += 1
+	end
+
+	def get_mad_at= (name)
+		last = @reindeer_ranking.delete(name.capitalize)
+		@reindeer_ranking << last
+	end
+
+	def gender= (new_gender)
+		@gender = new_gender
+	end
+
+	def age()
+		@age
+	end
+
+	def ethnicity()
+		@ethnicity
+	end
+
+	def ranking()
+		@reindeer_ranking
+	end
+
 end
 
 
@@ -45,8 +70,18 @@ example_genders.length.times do |i|
 	ethn = gets.chomp
 	santas << Santa.new(example_genders[i], example_ethnicities[i], answer, ethn)
 	santas[i].ethnicity_print
+
+	santas[i].celebrate_birthday
+	puts "Santa is now #{santas[i].age} years old"
+
+	puts "The current ranking is: #{santas[i].ranking}"
+	puts "Please enter the reindeer Santa doesn't like"
+	rein = gets.chomp
+	santas[i].get_mad_at = rein
+	puts "The new ranking is: #{santas[i].ranking}"
 	puts "---------"
 end
+
 
 
 
