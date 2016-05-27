@@ -23,3 +23,10 @@ function reverseString(str) {
 }
 
 console.log(reverseString("hello world"));
+
+var reverse = reverseString("This string is reversed");
+console.log(reverse);
+
+if (4 > 3) {
+	console.log(reverseString("truuuuu"));
+}
