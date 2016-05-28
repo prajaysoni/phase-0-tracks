@@ -102,3 +102,16 @@ end
 
 #=======================================================================
 # Reflection Section
+# 1. It uses the implicit form and uses symbolys to directly assign values
+# 2. require_relative accesses a file you've created and lets it be used in
+#    program. Require lets you access built-in Ruby modules
+# 3. You can do hash.each |key, value| to access each key-value pair in a hash
+#    You can use hash.each_key |key| to access each key in a hash
+# 4. We realized they were instance variables and didn't need to be used
+#    as arguments for the class methods
+# 5. The concept I solidified the most was iterating through an array
+
+
+
+
+
