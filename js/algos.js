@@ -104,14 +104,18 @@ function testData(words) {
 }
 
 
-testData(5);
-console.log(testData(5));
+for (var x = 0; x < 10; x++) {
+	var numWords = Math.round(Math.random() * (10-1) + 1);
+	var list = testData(numWords);
+	console.log(list);
+	console.log(longestPhrase(list));
+}
 
 
 
 
 
-
+/*
 
 // Driver code for keyValue
 
@@ -126,4 +130,4 @@ console.log(longestPhrase(['long', 'longer', 'longest']))
 console.log(longestPhrase(['longest', 'longer', 'long']))
 console.log(longestPhrase(['long', 'longest', 'longer']))
 
-
+*/
