@@ -30,17 +30,60 @@ function longestPhrase(list) {
 	return longest;
 }
 
+/*
+
+Key-value match function
+Input: two objects
+Output: boolean
+
+	Create a function with two arguments for each object
+	Create a for in loop
+	If both objects have the same key
+		If both objects have the same value
+			return true
+	If none of the conditions are met through the whole loop
+		return false
+
+
+
+
+
+*/
+
+
+function keyValue(obj1, obj2) {
+
+	for (var key in obj1) {
+		if (obj1.hasOwnProperty(key) && obj2.hasOwnProperty(key)) {
+			if (obj1[key] == obj2[key]) {
+				return true;
+			}
+
+		}
+		
+	}
+	return false;
+
+
+
+}
+
+
+console.log(keyValue({name: 'bob', test: '123', qwerty: 'asdfg'}, {name: 'bill', test: '123'}));
+console.log(keyValue({color: 'red', num: '3'}, {age: '31', car: 'Corvette'}));
+
+
+
+
+
+
+
+
+
+
+
 console.log(longestPhrase(['long', 'longer', 'longest']))
 console.log(longestPhrase(['longest', 'longer', 'long']))
 console.log(longestPhrase(['long', 'longest', 'longer']))
-
-
-
-
-
-
-
-
-
 
 
