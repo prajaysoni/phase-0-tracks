@@ -19,33 +19,21 @@ Output: Longest string from array
 function longestPhrase(list) {
 
 	var phrases = list;
+	var longest = phrases[0];
 
 	for (var i = 0; i < phrases.length - 1; i++) {
-		console.log(i);
-		if (phrases[i].length > phrases[i+1]) {
-			var longest = phrases[i];
-		}
-		else {
+		if (longest.length < phrases[i+1].length) {
 			longest = phrases[i+1];
 		}
-		/*
-		i = 0
-		l = aa
 
-		i = 1
-		l = aaa
-
-		i = 2
-
-
-
-		*/
 	}
 	return longest;
 }
 
-//console.log(longestPhrase(['a','aa','aaa','aaaa','aaaaa']));
-console.log(longestPhrase(['aa', 'aaa', 'a']));
+console.log(longestPhrase(['long', 'longer', 'longest']))
+console.log(longestPhrase(['longest', 'longer', 'long']))
+console.log(longestPhrase(['long', 'longest', 'longer']))
+
 
 
 
