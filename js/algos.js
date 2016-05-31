@@ -68,19 +68,59 @@ function keyValue(obj1, obj2) {
 
 }
 
+/*
+
+Test Data generator function
+Input: integer
+Output: array of string
+
+	Create function with 1 argument for the number of words (integer)
+	Create an empty array inside the function
+	Create a for loop running 0 to (number of words - 1) times.
+	Store a random number 1-10 in a variable
+	Create a random word variable that is empty
+	Nest another for loop inside running 0 to (random number of letters) times
+	Each time, add a random letter to the random word variable
+	When the  inner loop is done, push the word into the array
+	When the outer loop is done, return the array
+*/
+
+function testData(words) {
+	var list = [];
+	var alpha = "abcdefghijklmnopqrstuvwxyz";
+	for (var i = 0; i < words; i++) {
+		var randNum = Math.round(Math.random() * (10-1) + 1);
+		var randWord = '';
+		for (var n = 0; n < randNum; n++) {
+			var randChar = Math.round(Math.random() * (25));
+			randWord += alpha[randChar];
+		}
+		list.push(randWord);
+
+
+	}
+
+	return list;
+}
+
+
+testData(5);
+console.log(testData(5));
+
+
+
+
+
+
+
+// Driver code for keyValue
 
 console.log(keyValue({name: 'bob', test: '123', qwerty: 'asdfg'}, {name: 'bill', test: '123'}));
 console.log(keyValue({color: 'red', num: '3'}, {age: '31', car: 'Corvette'}));
 
 
 
-
-
-
-
-
-
-
+// Driver code for longestPhrase
 
 console.log(longestPhrase(['long', 'longer', 'longest']))
 console.log(longestPhrase(['longest', 'longer', 'long']))
