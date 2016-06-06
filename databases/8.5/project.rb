@@ -10,7 +10,7 @@
 require 'sqlite3'
 
 db = SQLite3::Database.new("lifts.db")
-#db.results_as_hash = true
+db.results_as_hash = true
 
 
 # Get user info
@@ -47,7 +47,14 @@ puts "Do you want to see the lifts from the previous days? Enter 'yes' or 'no'."
 answer = gets.chomp
 
 if answer.downcase == "yes"
-	p lift_data
+	i = 1
+	lift_data.each do |lifts|
+		puts "Day #{i} lifts"
+		puts "Squat: #{lifts['squat']} lbs"
+		puts "Bench: #{lifts['bench']} lbs"
+		puts "Deadlift: #{lifts['deadlift']} lbs"
+		i += 1
+	end
 end
 
 puts "Do you want to add more lift data? Enter 'yes' or 'no'."
@@ -70,10 +77,19 @@ if answer.downcase == "yes"
 	end until another_day.downcase == "no"
 end
 
+final_data = db.execute("SELECT * FROM lifts")
+
 puts "Do you want to see final set of data?"
 answer = gets.chomp
 if answer.downcase == "yes"
-	p lift_data
+	i = 1
+	final_data.each do |lifts|
+		puts "Day #{i} lifts"
+		puts "Squat: #{lifts['squat']} lbs"
+		puts "Bench: #{lifts['bench']} lbs"
+		puts "Deadlift: #{lifts['deadlift']} lbs"
+		i += 1
+	end
 	puts "Thank you for using the program. Happy lifting!!!"
 else
 	puts "Thank you for using the program. Happy lifting!!!"
