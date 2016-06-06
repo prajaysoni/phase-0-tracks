@@ -44,3 +44,34 @@ If the car is ealier than 2000, delete it.
 
 INPUT: DELETE FROM cars WHERE name="Mustang";
 OUTPUT: No output, but the command gets rid of the Mustang row.
+
+
+
+
+RELEASE 3
+Add another car, but with an unlisted color id
+INSERT INTO cars (name, year, awesome, color_id) VALUES ("Civic", 2008, "true", 33);
+
+
+INPUT: SELECT cars.name, cars.year, colors.name FROM cars LEFT JOIN colors ON cars.color_id = colors.id;
+OUTPUT:
+Corvette|2015|Blue
+Odyssey|2002|Grey
+Aventador|2014|Red
+Camry|2007|Blue
+Ultima|2003|Grey
+Civic|2008|
+
+Here, all the values from the left table were taken, even though there was no matching ID for Civic
+
+
+
+INPUT: SELECT cars.name, cars.year, colors.name FROM cars INNER JOIN colors ON cars.color_id = colors.id;
+OUTPUT:
+Corvette|2015|Blue
+Odyssey|2002|Grey
+Aventador|2014|Red
+Camry|2007|Blue
+Ultima|2003|Grey
+
+Here, only the values that matched up in both tables were taken. Notice the lack of the Civic row.
