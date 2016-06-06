@@ -79,6 +79,12 @@ end
 
 final_data = db.execute("SELECT * FROM lifts")
 
+
+days = 1
+final_data.each do
+	days += 1
+end
+
 puts "Do you want to see final set of data?"
 answer = gets.chomp
 if answer.downcase == "yes"
@@ -91,17 +97,25 @@ if answer.downcase == "yes"
 		i += 1
 	end
 	puts "Thank you for using the program. Happy lifting!!!"
-else
-	puts "Thank you for using the program. Happy lifting!!!"
+elsif answer.downcase == "no"
+	puts "Do you want to see data from a particular day?"
+	answer = gets.chomp
+	if answer.downcase == "yes"
+		begin
+			puts "Please enter the day you wish to see anywhere from 1 to #{days-1}."
+			day = gets.chomp.to_i
+			day_lifts = db.execute("SELECT * FROM lifts WHERE id=#{day}")
+			day_lifts.each do |lifts|
+				puts "Lifts for day #{day}"
+				puts "Squat: #{lifts['squat']} lbs"
+				puts "Bench: #{lifts['bench']} lbs"
+				puts "Deadlift: #{lifts['deadlift']} lbs"
+			end
+			puts "Do you want to get data from another day? Enter 'yes' or 'no'."
+			answer = gets.chomp
+		end until answer.downcase == 'no'
+	end
 end
 
 
-
-
-
-
-
-
-
-
-
+puts "Thanks for using the program. Happy lifting!!!"
