@@ -1,4 +1,4 @@
-.btn {
+#buttonRow button {
 	display: inline-block;
 	margin-right: 3em;
 	padding: 10px 20px;
@@ -7,11 +7,15 @@
 	border: none;
 }
 
-.data {
+#btnData p {
 	display: inline-block;
 	width: 2.5em;
 	margin-right: 3em;
 	text-align: center;
 	border: 2px solid gold;
 	padding: 5px;
+}
+
+.red {
+	color: red;
 }
