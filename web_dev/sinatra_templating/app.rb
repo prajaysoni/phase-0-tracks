@@ -24,4 +24,9 @@ post '/students' do
   redirect '/'
 end
 
+get '/location/:campus' do
+	@campus = params[:campus]
+	erb :location
+end
+
 # add static resources
