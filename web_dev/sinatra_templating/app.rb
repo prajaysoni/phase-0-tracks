@@ -29,4 +29,16 @@ get '/location/:campus' do
 	erb :location
 end
 
+get '/campus_update' do
+	erb :campus_update
+end
+
+post '/campus' do
+	db.execute("UPDATE students SET campus=? WHERE name=? AND age=?", [params['campus'], params['name'], params['age'].to_i])
+	redirect '/'
+end
+
+
+
+
 # add static resources
