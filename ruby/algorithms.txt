@@ -1,0 +1,30 @@
+- Place yourself in front of the buttons
+- Place your hand at the bottom of the leftmost column
+- Until there are no more numbers in that column
+	- Record the number and position and move up the column
+	- When there are no more numbers left in the column
+		-  Reset position back down to the first in that column and shift one column to the right 
+- Repeat above loop until there are no numbers left at all
+- Reset position to the first button
+- While the user input is not valid
+	- If valid floor 
+		- Then press button and reset position back to first button
+	- Else 
+		- Ask user for a valid input
+- End
+
+Having a conversation on the phone:
+
+- Is the phone ringing?
+	- No?
+		- Continue watching Game of Thrones
+	- Yes?
+		Is it important?
+			- No?
+				- Continue watching Game of Thrones
+			- Yes?
+				- Move hand towards phone and grab it
+				- Use thumb to slide across screen to unlock
+				- Put phone to ear and have conversation
+				- Finish conversation
+- End
