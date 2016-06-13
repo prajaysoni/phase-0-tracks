@@ -10,3 +10,10 @@
 		Use Shell Scripts to Increase Leverage and Portability
 		Avoid Captive User Interfaces
 		Make Every Program a Filter
+
+2.	What is a VPS? What are its advantages?
+
+	A VPS is a virtual private server. It is basically a server created online.
+	There is no physical space this server occupies. Because there is no physical
+	server, it isn't as powerful as the real one. However, due to the same reason,
+	it's also cheaper than a physical server.
